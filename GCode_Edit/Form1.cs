@@ -94,6 +94,16 @@ namespace GCode_Edit
                 string newGapACC = "M204 S" + acceleration_GapFill.Value.ToString();
                 string newSupportACC = "M204 S" + acceleration_Support.Value.ToString();
                 string newDenseSupportACC = "M204 S" + acceleration_DenseSupport.Value.ToString();
+
+                string newSkirtJerk = "M205 X" + jerk_Skirt.Value.ToString() + " Y" + jerk_Skirt.Value.ToString();
+                string newOuterJerk = "M205 X" + jerk_OuterPerimeter.Value.ToString() + " Y" + jerk_OuterPerimeter.Value.ToString();
+                string newInnerJerk = "M205 X" + jerk_InnterPerimeter.Value.ToString() + " Y" + jerk_InnterPerimeter.Value.ToString();
+                string newSolidJerk = "M205 X" + jerk_SolidLayer.Value.ToString() + " Y" + jerk_SolidLayer.Value.ToString();
+                string newInfillJerk = "M205 X" + jerk_Infill.Value.ToString() + " Y" + jerk_Infill.Value.ToString();
+                string newGapJerk = "M205 X" + jerk_GapFill.Value.ToString() + " Y" + jerk_GapFill.Value.ToString();
+                string newSupportJerk = "M205 X" + jerk_Support.Value.ToString() + " Y" + jerk_Support.Value.ToString();
+                string newDenseSupportJerk = "M205 X" + jerk_DenseSupport.Value.ToString() + " Y" + jerk_DenseSupport.Value.ToString();
+
                 int linesfound = 0;
 
                 while ((line = gcode.ReadLine()) != null)
@@ -104,34 +114,42 @@ namespace GCode_Edit
                         case "; outer perimeter":
                             linesfound++;
                             gcode2.WriteLine(newOuterACC);
+                            gcode2.WriteLine(newOuterJerk);
                             break;
                         case "; inner perimeter":
                             linesfound++;
                             gcode2.WriteLine(newInnerACC);
+                            gcode2.WriteLine(newInnerJerk);
                             break;
                         case "; skirt":
                             linesfound++;
                             gcode2.WriteLine(newSkirtACC);
+                            gcode2.WriteLine(newSkirtJerk);
                             break;
                         case "; solid layer":
                             linesfound++;
                             gcode2.WriteLine(newSolidACC);
+                            gcode2.WriteLine(newSolidJerk);
                             break;
                         case "; infill":
                             linesfound++;
                             gcode2.WriteLine(newInfillACC);
+                            gcode2.WriteLine(newInfillJerk);
                             break;
                         case "; gap fill":
                             linesfound++;
                             gcode2.WriteLine(newGapACC);
+                            gcode2.WriteLine(newGapJerk);
                             break;
                         case "; support":
                             linesfound++;
                             gcode2.WriteLine(newSupportACC);
+                            gcode2.WriteLine(newSupportJerk);
                             break;
                         case "; dense support":
                             linesfound++;
                             gcode2.WriteLine(newDenseSupportACC);
+                            gcode2.WriteLine(newDenseSupportJerk);
                             break;
                     }
                 }
