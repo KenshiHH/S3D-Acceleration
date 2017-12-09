@@ -98,6 +98,7 @@
             // 
             // button_Modify
             // 
+            this.button_Modify.Enabled = false;
             this.button_Modify.Location = new System.Drawing.Point(6, 363);
             this.button_Modify.Name = "button_Modify";
             this.button_Modify.Size = new System.Drawing.Size(75, 23);
@@ -675,7 +676,7 @@
             this.Controls.Add(this.button_OpenFile);
             this.Controls.Add(this.label_OuterPerimeter);
             this.Name = "Form1";
-            this.Text = "S3D Gcode 1.0";
+            this.Text = "S3D Gcode 1.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_OuterPerimeter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_InnerPerimeter)).EndInit();
