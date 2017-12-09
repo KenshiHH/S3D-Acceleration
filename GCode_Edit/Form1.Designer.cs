@@ -46,6 +46,8 @@
             this.acceleration_GapFill = new System.Windows.Forms.NumericUpDown();
             this.acceleration_Support = new System.Windows.Forms.NumericUpDown();
             this.acceleration_DenseSupport = new System.Windows.Forms.NumericUpDown();
+            this.label_FileLabel = new System.Windows.Forms.Label();
+            this.label_FileSource = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_OuterPerimeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_InnerPerimeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_Skirt)).BeginInit();
@@ -364,11 +366,32 @@
             0,
             0});
             // 
+            // label_FileLabel
+            // 
+            this.label_FileLabel.AutoEllipsis = true;
+            this.label_FileLabel.AutoSize = true;
+            this.label_FileLabel.Location = new System.Drawing.Point(9, 9);
+            this.label_FileLabel.Name = "label_FileLabel";
+            this.label_FileLabel.Size = new System.Drawing.Size(26, 13);
+            this.label_FileLabel.TabIndex = 13;
+            this.label_FileLabel.Text = "File:";
+            // 
+            // label_FileSource
+            // 
+            this.label_FileSource.AutoSize = true;
+            this.label_FileSource.Location = new System.Drawing.Point(41, 9);
+            this.label_FileSource.Name = "label_FileSource";
+            this.label_FileSource.Size = new System.Drawing.Size(31, 13);
+            this.label_FileSource.TabIndex = 14;
+            this.label_FileSource.Text = "none";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 368);
+            this.Controls.Add(this.label_FileSource);
+            this.Controls.Add(this.label_FileLabel);
             this.Controls.Add(this.acceleration_DenseSupport);
             this.Controls.Add(this.acceleration_Support);
             this.Controls.Add(this.acceleration_GapFill);
@@ -422,6 +445,8 @@
         private System.Windows.Forms.NumericUpDown acceleration_GapFill;
         private System.Windows.Forms.NumericUpDown acceleration_Support;
         private System.Windows.Forms.NumericUpDown acceleration_DenseSupport;
+        private System.Windows.Forms.Label label_FileLabel;
+        private System.Windows.Forms.Label label_FileSource;
     }
 }
 

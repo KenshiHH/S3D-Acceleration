@@ -55,7 +55,7 @@ namespace GCode_Edit
                         using (myStream)
                         {
                             GCodeFilePath = openFileDialog1.FileName;
-
+                            label_FileSource.Text = Path.GetFileNameWithoutExtension(GCodeFilePath);
                             GCodePatchedFilePath = Path.GetDirectoryName(GCodeFilePath) +"\\"+ Path.GetFileNameWithoutExtension(GCodeFilePath) + "_patched" + Path.GetExtension(GCodeFilePath);
                         }
                     }
@@ -72,14 +72,14 @@ namespace GCode_Edit
             StreamReader gcode = new StreamReader(GCodeFilePath);
             StreamWriter gcode2 = new StreamWriter(GCodePatchedFilePath);
             string line;
-            string newSkirtACC = "M201 X" + acceleration_Skirt.Value.ToString() + " Y" + acceleration_Skirt.Value.ToString();
-            string newOuterACC = "M201 X" + acceleration_OuterPerimeter.Value.ToString() + " Y" + acceleration_OuterPerimeter.Value.ToString();
-            string newInnerACC = "M201 X" + acceleration_InnerPerimeter.Value.ToString() + " Y" + acceleration_InnerPerimeter.Value.ToString();
-            string newSolidACC = "M201 X" + acceleration_SolidLayer.Value.ToString() + " Y" + acceleration_SolidLayer.Value.ToString();
-            string newInfillACC = "M201 X" + acceleration_Infill.Value.ToString() + " Y" + acceleration_Infill.Value.ToString();
-            string newGapACC = "M201 X" + acceleration_GapFill.Value.ToString() + " Y" + acceleration_GapFill.Value.ToString();
-            string newSupportACC = "M201 X" + acceleration_Support.Value.ToString() + " Y" + acceleration_Support.Value.ToString();
-            string newDenseSupportACC = "M201 X" + acceleration_DenseSupport.Value.ToString() + " Y" + acceleration_DenseSupport.Value.ToString();
+            string newSkirtACC = "M204 S" + acceleration_Skirt.Value.ToString();
+            string newOuterACC = "M204 S" + acceleration_OuterPerimeter.Value.ToString();
+            string newInnerACC = "M204 S" + acceleration_InnerPerimeter.Value.ToString();
+            string newSolidACC = "M204 S" + acceleration_SolidLayer.Value.ToString();
+            string newInfillACC = "M204 S" + acceleration_Infill.Value.ToString();
+            string newGapACC = "M204 S" + acceleration_GapFill.Value.ToString();
+            string newSupportACC = "M204 S" + acceleration_Support.Value.ToString();
+            string newDenseSupportACC = "M204 S" + acceleration_DenseSupport.Value.ToString();
             int linesfound = 0;
 
             while ((line = gcode.ReadLine()) != null)
