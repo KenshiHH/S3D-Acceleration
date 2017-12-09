@@ -1,6 +1,6 @@
 # S3D-Acceleration
 simplify3d is missing the feature to change the acceleration based on the different prinint typed (infill|outer perimeter|inner perimter etc.)
-i love this feature in cura so i made a small tool to add these settings to a gcode files created via simplify3d.
+i love this feature in cura so i made a small tool to add these settings to gcode files created via simplify3d.
 
 manual:
 
