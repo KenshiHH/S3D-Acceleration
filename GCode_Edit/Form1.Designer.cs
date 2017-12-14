@@ -52,7 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.jerk_Skirt = new System.Windows.Forms.NumericUpDown();
             this.jerk_OuterPerimeter = new System.Windows.Forms.NumericUpDown();
-            this.jerk_InnterPerimeter = new System.Windows.Forms.NumericUpDown();
+            this.jerk_InnerPerimeter = new System.Windows.Forms.NumericUpDown();
             this.jerk_SolidLayer = new System.Windows.Forms.NumericUpDown();
             this.jerk_Infill = new System.Windows.Forms.NumericUpDown();
             this.jerk_GapFill = new System.Windows.Forms.NumericUpDown();
@@ -68,7 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_DenseSupport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_Skirt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_OuterPerimeter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jerk_InnterPerimeter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jerk_InnerPerimeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_SolidLayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_Infill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_GapFill)).BeginInit();
@@ -139,7 +139,7 @@
             this.acceleration_OuterPerimeter.Size = new System.Drawing.Size(120, 20);
             this.acceleration_OuterPerimeter.TabIndex = 4;
             this.acceleration_OuterPerimeter.Value = new decimal(new int[] {
-            2000,
+            1000,
             0,
             0,
             0});
@@ -244,7 +244,7 @@
             this.acceleration_Skirt.Size = new System.Drawing.Size(120, 20);
             this.acceleration_Skirt.TabIndex = 3;
             this.acceleration_Skirt.Value = new decimal(new int[] {
-            2000,
+            1000,
             0,
             0,
             0});
@@ -271,7 +271,7 @@
             this.acceleration_SolidLayer.Size = new System.Drawing.Size(120, 20);
             this.acceleration_SolidLayer.TabIndex = 6;
             this.acceleration_SolidLayer.Value = new decimal(new int[] {
-            2000,
+            1500,
             0,
             0,
             0});
@@ -353,7 +353,7 @@
             this.acceleration_Support.Size = new System.Drawing.Size(120, 20);
             this.acceleration_Support.TabIndex = 9;
             this.acceleration_Support.Value = new decimal(new int[] {
-            2000,
+            1500,
             0,
             0,
             0});
@@ -380,7 +380,7 @@
             this.acceleration_DenseSupport.Size = new System.Drawing.Size(120, 20);
             this.acceleration_DenseSupport.TabIndex = 10;
             this.acceleration_DenseSupport.Value = new decimal(new int[] {
-            2000,
+            1500,
             0,
             0,
             0});
@@ -446,7 +446,7 @@
             this.jerk_Skirt.Size = new System.Drawing.Size(50, 20);
             this.jerk_Skirt.TabIndex = 17;
             this.jerk_Skirt.Value = new decimal(new int[] {
-            20,
+            10,
             0,
             0,
             0});
@@ -473,33 +473,33 @@
             this.jerk_OuterPerimeter.Size = new System.Drawing.Size(50, 20);
             this.jerk_OuterPerimeter.TabIndex = 18;
             this.jerk_OuterPerimeter.Value = new decimal(new int[] {
-            20,
+            10,
             0,
             0,
             0});
             // 
-            // jerk_InnterPerimeter
+            // jerk_InnerPerimeter
             // 
-            this.jerk_InnterPerimeter.Increment = new decimal(new int[] {
+            this.jerk_InnerPerimeter.Increment = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.jerk_InnterPerimeter.Location = new System.Drawing.Point(286, 168);
-            this.jerk_InnterPerimeter.Maximum = new decimal(new int[] {
+            this.jerk_InnerPerimeter.Location = new System.Drawing.Point(286, 168);
+            this.jerk_InnerPerimeter.Maximum = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.jerk_InnterPerimeter.Minimum = new decimal(new int[] {
+            this.jerk_InnerPerimeter.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.jerk_InnterPerimeter.Name = "jerk_InnterPerimeter";
-            this.jerk_InnterPerimeter.Size = new System.Drawing.Size(50, 20);
-            this.jerk_InnterPerimeter.TabIndex = 19;
-            this.jerk_InnterPerimeter.Value = new decimal(new int[] {
+            this.jerk_InnerPerimeter.Name = "jerk_InnerPerimeter";
+            this.jerk_InnerPerimeter.Size = new System.Drawing.Size(50, 20);
+            this.jerk_InnerPerimeter.TabIndex = 19;
+            this.jerk_InnerPerimeter.Value = new decimal(new int[] {
             20,
             0,
             0,
@@ -527,7 +527,7 @@
             this.jerk_SolidLayer.Size = new System.Drawing.Size(50, 20);
             this.jerk_SolidLayer.TabIndex = 20;
             this.jerk_SolidLayer.Value = new decimal(new int[] {
-            20,
+            15,
             0,
             0,
             0});
@@ -608,7 +608,7 @@
             this.jerk_Support.Size = new System.Drawing.Size(50, 20);
             this.jerk_Support.TabIndex = 23;
             this.jerk_Support.Value = new decimal(new int[] {
-            20,
+            15,
             0,
             0,
             0});
@@ -635,7 +635,7 @@
             this.jerk_DenseSupport.Size = new System.Drawing.Size(50, 20);
             this.jerk_DenseSupport.TabIndex = 24;
             this.jerk_DenseSupport.Value = new decimal(new int[] {
-            20,
+            15,
             0,
             0,
             0});
@@ -650,7 +650,7 @@
             this.Controls.Add(this.jerk_GapFill);
             this.Controls.Add(this.jerk_Infill);
             this.Controls.Add(this.jerk_SolidLayer);
-            this.Controls.Add(this.jerk_InnterPerimeter);
+            this.Controls.Add(this.jerk_InnerPerimeter);
             this.Controls.Add(this.jerk_OuterPerimeter);
             this.Controls.Add(this.jerk_Skirt);
             this.Controls.Add(this.label2);
@@ -688,7 +688,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_DenseSupport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_Skirt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_OuterPerimeter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jerk_InnterPerimeter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jerk_InnerPerimeter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_SolidLayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_Infill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_GapFill)).EndInit();
@@ -724,7 +724,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown jerk_Skirt;
         private System.Windows.Forms.NumericUpDown jerk_OuterPerimeter;
-        private System.Windows.Forms.NumericUpDown jerk_InnterPerimeter;
+        private System.Windows.Forms.NumericUpDown jerk_InnerPerimeter;
         private System.Windows.Forms.NumericUpDown jerk_SolidLayer;
         private System.Windows.Forms.NumericUpDown jerk_Infill;
         private System.Windows.Forms.NumericUpDown jerk_GapFill;
