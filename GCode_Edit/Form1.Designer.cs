@@ -676,7 +676,7 @@
             this.Controls.Add(this.button_OpenFile);
             this.Controls.Add(this.label_OuterPerimeter);
             this.Name = "Form1";
-            this.Text = "S3D Gcode 1.2";
+            this.Text = "S3D Gcode 1.3";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_OuterPerimeter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_InnerPerimeter)).EndInit();
