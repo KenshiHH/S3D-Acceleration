@@ -58,6 +58,20 @@
             this.jerk_GapFill = new System.Windows.Forms.NumericUpDown();
             this.jerk_Support = new System.Windows.Forms.NumericUpDown();
             this.jerk_DenseSupport = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_skirt = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkBox_OuterPerimeter = new System.Windows.Forms.CheckBox();
+            this.checkBox_InnerPerimeter = new System.Windows.Forms.CheckBox();
+            this.checkBox_SolidLayer = new System.Windows.Forms.CheckBox();
+            this.checkBox_Infill = new System.Windows.Forms.CheckBox();
+            this.checkBox_GapFill = new System.Windows.Forms.CheckBox();
+            this.checkBox_Support = new System.Windows.Forms.CheckBox();
+            this.checkBox_DenseSupport = new System.Windows.Forms.CheckBox();
+            this.checkBox_bridge = new System.Windows.Forms.CheckBox();
+            this.jerk_bridge = new System.Windows.Forms.NumericUpDown();
+            this.acceleration_bridge = new System.Windows.Forms.NumericUpDown();
+            this.label_bridge = new System.Windows.Forms.Label();
+            this.LinearAdvance = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_OuterPerimeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_InnerPerimeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_Skirt)).BeginInit();
@@ -74,6 +88,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.jerk_GapFill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_Support)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_DenseSupport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jerk_bridge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acceleration_bridge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LinearAdvance)).BeginInit();
             this.SuspendLayout();
             // 
             // label_OuterPerimeter
@@ -640,11 +657,199 @@
             0,
             0});
             // 
+            // checkBox_skirt
+            // 
+            this.checkBox_skirt.AutoSize = true;
+            this.checkBox_skirt.Location = new System.Drawing.Point(366, 92);
+            this.checkBox_skirt.Name = "checkBox_skirt";
+            this.checkBox_skirt.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_skirt.TabIndex = 25;
+            this.checkBox_skirt.UseVisualStyleBackColor = true;
+            this.checkBox_skirt.CheckedChanged += new System.EventHandler(this.checkBox_skirt_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(329, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 17);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "LinAdvance";
+            // 
+            // checkBox_OuterPerimeter
+            // 
+            this.checkBox_OuterPerimeter.AutoSize = true;
+            this.checkBox_OuterPerimeter.Location = new System.Drawing.Point(366, 131);
+            this.checkBox_OuterPerimeter.Name = "checkBox_OuterPerimeter";
+            this.checkBox_OuterPerimeter.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_OuterPerimeter.TabIndex = 27;
+            this.checkBox_OuterPerimeter.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_InnerPerimeter
+            // 
+            this.checkBox_InnerPerimeter.AutoSize = true;
+            this.checkBox_InnerPerimeter.Location = new System.Drawing.Point(366, 170);
+            this.checkBox_InnerPerimeter.Name = "checkBox_InnerPerimeter";
+            this.checkBox_InnerPerimeter.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_InnerPerimeter.TabIndex = 28;
+            this.checkBox_InnerPerimeter.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_SolidLayer
+            // 
+            this.checkBox_SolidLayer.AutoSize = true;
+            this.checkBox_SolidLayer.Location = new System.Drawing.Point(366, 209);
+            this.checkBox_SolidLayer.Name = "checkBox_SolidLayer";
+            this.checkBox_SolidLayer.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_SolidLayer.TabIndex = 29;
+            this.checkBox_SolidLayer.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Infill
+            // 
+            this.checkBox_Infill.AutoSize = true;
+            this.checkBox_Infill.Location = new System.Drawing.Point(366, 248);
+            this.checkBox_Infill.Name = "checkBox_Infill";
+            this.checkBox_Infill.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_Infill.TabIndex = 30;
+            this.checkBox_Infill.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_GapFill
+            // 
+            this.checkBox_GapFill.AutoSize = true;
+            this.checkBox_GapFill.Location = new System.Drawing.Point(366, 287);
+            this.checkBox_GapFill.Name = "checkBox_GapFill";
+            this.checkBox_GapFill.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_GapFill.TabIndex = 31;
+            this.checkBox_GapFill.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Support
+            // 
+            this.checkBox_Support.AutoSize = true;
+            this.checkBox_Support.Location = new System.Drawing.Point(366, 326);
+            this.checkBox_Support.Name = "checkBox_Support";
+            this.checkBox_Support.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_Support.TabIndex = 32;
+            this.checkBox_Support.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DenseSupport
+            // 
+            this.checkBox_DenseSupport.AutoSize = true;
+            this.checkBox_DenseSupport.Location = new System.Drawing.Point(366, 365);
+            this.checkBox_DenseSupport.Name = "checkBox_DenseSupport";
+            this.checkBox_DenseSupport.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_DenseSupport.TabIndex = 33;
+            this.checkBox_DenseSupport.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_bridge
+            // 
+            this.checkBox_bridge.AutoSize = true;
+            this.checkBox_bridge.Location = new System.Drawing.Point(366, 404);
+            this.checkBox_bridge.Name = "checkBox_bridge";
+            this.checkBox_bridge.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_bridge.TabIndex = 37;
+            this.checkBox_bridge.UseVisualStyleBackColor = true;
+            // 
+            // jerk_bridge
+            // 
+            this.jerk_bridge.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.jerk_bridge.Location = new System.Drawing.Point(286, 402);
+            this.jerk_bridge.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.jerk_bridge.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.jerk_bridge.Name = "jerk_bridge";
+            this.jerk_bridge.Size = new System.Drawing.Size(50, 20);
+            this.jerk_bridge.TabIndex = 36;
+            this.jerk_bridge.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.jerk_bridge.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged_2);
+            // 
+            // acceleration_bridge
+            // 
+            this.acceleration_bridge.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.acceleration_bridge.Location = new System.Drawing.Point(143, 402);
+            this.acceleration_bridge.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.acceleration_bridge.Minimum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.acceleration_bridge.Name = "acceleration_bridge";
+            this.acceleration_bridge.Size = new System.Drawing.Size(120, 20);
+            this.acceleration_bridge.TabIndex = 34;
+            this.acceleration_bridge.Value = new decimal(new int[] {
+            1500,
+            0,
+            0,
+            0});
+            // 
+            // label_bridge
+            // 
+            this.label_bridge.AutoSize = true;
+            this.label_bridge.Location = new System.Drawing.Point(140, 386);
+            this.label_bridge.Name = "label_bridge";
+            this.label_bridge.Size = new System.Drawing.Size(36, 13);
+            this.label_bridge.TabIndex = 35;
+            this.label_bridge.Text = "bridge";
+            // 
+            // LinearAdvance
+            // 
+            this.LinearAdvance.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.LinearAdvance.Location = new System.Drawing.Point(350, 66);
+            this.LinearAdvance.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.LinearAdvance.Name = "LinearAdvance";
+            this.LinearAdvance.Size = new System.Drawing.Size(50, 20);
+            this.LinearAdvance.TabIndex = 38;
+            this.LinearAdvance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 393);
+            this.ClientSize = new System.Drawing.Size(424, 438);
+            this.Controls.Add(this.LinearAdvance);
+            this.Controls.Add(this.checkBox_bridge);
+            this.Controls.Add(this.jerk_bridge);
+            this.Controls.Add(this.acceleration_bridge);
+            this.Controls.Add(this.label_bridge);
+            this.Controls.Add(this.checkBox_DenseSupport);
+            this.Controls.Add(this.checkBox_Support);
+            this.Controls.Add(this.checkBox_GapFill);
+            this.Controls.Add(this.checkBox_Infill);
+            this.Controls.Add(this.checkBox_SolidLayer);
+            this.Controls.Add(this.checkBox_InnerPerimeter);
+            this.Controls.Add(this.checkBox_OuterPerimeter);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.checkBox_skirt);
             this.Controls.Add(this.jerk_DenseSupport);
             this.Controls.Add(this.jerk_Support);
             this.Controls.Add(this.jerk_GapFill);
@@ -676,7 +881,7 @@
             this.Controls.Add(this.button_OpenFile);
             this.Controls.Add(this.label_OuterPerimeter);
             this.Name = "Form1";
-            this.Text = "S3D Gcode 1.3";
+            this.Text = "S3D Gcode 1.4";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_OuterPerimeter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acceleration_InnerPerimeter)).EndInit();
@@ -694,6 +899,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.jerk_GapFill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_Support)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jerk_DenseSupport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jerk_bridge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acceleration_bridge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LinearAdvance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -730,6 +938,20 @@
         private System.Windows.Forms.NumericUpDown jerk_GapFill;
         private System.Windows.Forms.NumericUpDown jerk_Support;
         private System.Windows.Forms.NumericUpDown jerk_DenseSupport;
+        private System.Windows.Forms.CheckBox checkBox_skirt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBox_OuterPerimeter;
+        private System.Windows.Forms.CheckBox checkBox_InnerPerimeter;
+        private System.Windows.Forms.CheckBox checkBox_SolidLayer;
+        private System.Windows.Forms.CheckBox checkBox_Infill;
+        private System.Windows.Forms.CheckBox checkBox_GapFill;
+        private System.Windows.Forms.CheckBox checkBox_Support;
+        private System.Windows.Forms.CheckBox checkBox_DenseSupport;
+        private System.Windows.Forms.CheckBox checkBox_bridge;
+        private System.Windows.Forms.NumericUpDown jerk_bridge;
+        private System.Windows.Forms.NumericUpDown acceleration_bridge;
+        private System.Windows.Forms.Label label_bridge;
+        private System.Windows.Forms.NumericUpDown LinearAdvance;
     }
 }
 
